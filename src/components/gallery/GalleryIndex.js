@@ -22,7 +22,7 @@ const GalleryIndex = () => {
   useEffect(() => {
     const getArt = async () => {
       try {
-        const { data } = await axios.get(`https://api.harvardartmuseums.org/object?apikey=${process.env.REACT_APP_API_KEY}&size=100&page=10`)
+        const { data } = await axios.get(`https://api.harvardartmuseums.org/object?apikey=${process.env.REACT_APP_API_KEY}&size=50`)
         setArt(data.records)
         console.log(data.records)
       } catch (err) {
@@ -47,12 +47,13 @@ const GalleryIndex = () => {
               return art.people
             }).map(art => {
               const { id, people, images } = art
-              //console.log(id, name, baseimageurl)
+              console.log(images)
               return (
                 <Col key={id} lg="4" md="6" sm="12" className='art'>
                   <Link to={`/gallery/${id}`}>
                     <Card>
-                      <div className="card-image" style={{ backgroundImage: `url('${images[0] && images[0].baseimageurl ? images[0].baseimageurl : placeholder}')` }}></div>
+                      <div className="card-image" style={{ backgroundImage: `url('${images && images[0] && images[0].baseimageurl ? images[0].baseimageurl : placeholder}')` }}></div>
+
                       <Card.Body>
                         <Card.Text>{people[0].name}</Card.Text>
                       </Card.Body>

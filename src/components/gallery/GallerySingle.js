@@ -43,7 +43,7 @@ const GallerySingle = () => {
           {art &&
             <>
               <Col>
-                <img className='singleImage' src={art.images[0] && art.images[0].baseimageurl ? art.images[0].baseimageurl : placeholder} alt={art.people[0].name} />
+                <img className='singleImage' src={art.images && art.images[0] && art.images[0].baseimageurl ? art.images[0].baseimageurl : placeholder} alt={art.people.name} />
               </Col>
               <Col md="6" className='singleText mt-3 col-md-6'>
                 <h4 className='display-6'>{art.people[0].name}, </h4>
