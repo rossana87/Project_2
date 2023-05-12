@@ -1,4 +1,4 @@
-# ![GA](https://cloud.githubusercontent.com/assets/40461/8183776/469f976e-1432-11e5-8199-6ac91363302b.png) SEI Project 2: Hardvard Art Museum API
+# SEI Project 2: Hardvard Art Museum API
 
 ## Overview
 The second project of the Software Engineering immersive course at General Assembly London is a React project. The assignment was to build a React app that uses an external API, the project will be completed in a team of two within 36 hours.
