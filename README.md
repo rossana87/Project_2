@@ -42,14 +42,14 @@ This was a pair project with [Eunyeong Jeong](https://github.com/spacejey) and t
 
 ## Planning
 
-Before planning, my teammate and I had to find an open API. We had a chat about what we liked and what we were interested in. We both picked art and from this instant we both started looking for an open art API. The Harvard Art Museum has an open API and we decided to proceed with this one.
+Before planning, my teammate and I had to find an open API. We had a chat about what we liked and what we were interested in. We both picked art and the next step was to start looking for an open art API. The Harvard Art Museum has an open API and we decided to proceed with this one.
 The wireframe was done in Figma to have an overview of the project and to decide where to place all the elements. 
 
 ![](https://res.cloudinary.com/dtu5wu4i9/image/upload/v1683889739/Project%202/project-2-readme-google-docs-0_ryv04c.png)
 
-The application would start with a home page with the ‘Welcome’. We decided to create the navbar  with a logo on the left hand side and on the right hand side the page Gallery, which will show all the paintings and, the Search where the user will be able to type the name of the artist and find just his/her artwork. When using the application on a small screen or mobile device, Gallery and Search would become a drop down instead.
+The application would start with a home page with the ‘Welcome’. We decided to create the navbar  with a logo on the left hand side and on the right hand side the page Gallery, which will show all the paintings and the Search where the user will be able to type the name of the artist and find just his/her artwork. When using the application on a small screen or mobile device, Gallery and Search would become a drop down instead.
 
-Gallery Single means that when clicking on the single painting, it will show only that painting that the user clicked on, providing more information on the artist, display date and description of the painting. On this page, as per wireframe, we were still unsure whether placing the painting and the information vertically or horizontally. Every page was built using Bootstrap.
+Gallery Single means that when clicking on the single painting it will show only the painting that the user clicked on, provide more information on the artist, display date and description of the painting. On this page, as per wireframe, we were still unsure whether placing the painting and the information vertically or horizontally. Every page was built using Bootstrap.
 
 From the beginning of the project my teammate showed a very big interest in styling. Therefore, we came to the conclusion that she was going to look after CSS and I was going to look after React. I created a plan to follow and once I finished one component, I was going to inform my teammate, so she could style it.
 Plan for React:
@@ -74,12 +74,12 @@ Final project:
 
 #### Creating all React components
 
-* I created all the folders and components inside the folder src → components. This may sound like something not very important, but it is if you are an organised person. The second step was to import the components in `App.js`.
+* I created all the folders and components inside the folder src → components. This may sound like something not very important but it is if you are an organised person. The second step was to import the components in `App.js`.
 
 #### Fetching the data and testing
 
-* In order to request the correct data, it is important to read through the documentation, in this particular scenario I worked with the Harvard Art Museum documentation API. I spent some time testing the URLs. This was done in Insomnia as well. In the function below I fetched the data through an `axios.get`, which is a popular JavaScript library that is used to make HTTP requests from a web browser or a Node.js server. 
-* Axios is commonly used in web development when interacting with APIs, fetching data from servers, and sending data to servers. It supports various features such as handling requests and response headers, intercepting requests and responses, and handling errors in a straightforward manner.
+* In order to request the correct data it is important to read through the documentation, in this particular scenario I worked with the Harvard Art Museum documentation API. I spent some time testing the URLs. This was done in Insomnia as well. In the function below I fetched the data through an `axios.get`, which is a popular JavaScript library that is used to make HTTP requests from a web browser or a Node.js server. 
+* Axios is commonly used in web development when interacting with APIs, fetching data from servers and sending data to servers. It supports various features such as handling requests and response headers, intercepting requests and responses, and handling errors in a straightforward manner.
 * In the code below, Axios is used to send a GET request to the Harvard Art Museums API and retrieve art data. It simplifies the process of making the API request by providing a convenient `get()` method.
 * Once the request was working, I started getting familiar with the data and started testing on how I could manipulate the data that I needed.
 
@@ -101,8 +101,8 @@ useEffect(() => {
 
 #### The React Router
 * React router is one of the best features that React has. I imported and installed `react-router-dom`. The `BrowserRouter` wraps all our Routes and any component that sits outside Browser Route will not be able to use `Link`, so if we need the latter one, we need to nest every component or element inside of the `BrowserRouter`.
-For instance, when the user clicks on the logo that we have on the left hand side, it will redirect the user back to the homepage. Thanks to the React router, when redirecting the user the page will not reload and the navbar will always be there and will never change.
-* In the code below, routes are the different pages that we are creating in the Nav Bar, such as the HomePage, Gallery Index (the page that contains all the images) and Gallery Single, which is the page when the user clicks on a particular image.
+For instance, when the user clicks on the logo that we have on the left hand side it will redirect the user back to the homepage. Thanks to the React router, when redirecting the user the page will not reload and the navbar will always be there and will never change.
+* In the code below, routes are the different pages that we are creating in the Nav Bar such as the HomePage, Gallery Index (the page that contains all the images) and Gallery Single, which is the page when the user clicks on a particular image.
 
 ```js
 const App = () => {
@@ -154,9 +154,9 @@ const PageNavBar = () => {
 
 #### Environment variables
 
-* Something new that I learned during the project was the environment variables. Environment variables are a way of storing sensitive or important variables used in our app in a way that is secure and not publicly available. This is usually in the form of a hidden config file called `.env` that always goes in the same folder as my `package.json`. Under the file `.env`  I have the `REACT_APP_API_KEY`, which is the secret key that I received from the Harvard Art Museum API when I registered. Of course I cannot show the code snippet or you will be able to see the API key. However, to get this API key, I had to send a request to the Harvard Art Museum and I received the key in our email.
-* To make use of this environment variable in the code, it is concatenated with the API URL in the `axios.get()` call to pass the API key as a parameter, ensuring that the request to the Harvard Art Museums API is authenticated and authorised.
-* Once I pushed the project to gitHub, this `.env` file disappeared and I am the only person able to see it.
+* Something new that I learned during the project was the environment variables. Environment variables are a way of storing sensitive or important variables used in our app in a way that is secure and not publicly available. This is usually in the form of a hidden config file called `.env` that always goes in the same folder as my `package.json`. Under the file `.env`  I have the `REACT_APP_API_KEY`, which is the secret key that I received from the Harvard Art Museum API when I registered. Of course I cannot show the code snippet or you will be able to see the API key. However, to get this API key, I had to send a request to the Harvard Art Museum and I received the key by email.
+* To make use of this environment variable in the code it is concatenated with the API URL in the `axios.get()` call to pass the API key as a parameter, ensuring that the request to the Harvard Art Museums API is authenticated and authorised.
+* Once I pushed the project to gitHub this `.env` file disappeared and I am the only person able to see it.
 
 ```js
 const { data } = await axios.get(`https://api.harvardartmuseums.org/object?apikey=${process.env.REACT_APP_API_KEY}&size=50`)
@@ -164,7 +164,7 @@ const { data } = await axios.get(`https://api.harvardartmuseums.org/object?apike
 
 #### Gallery Index Page
 
-* On the Gallery Page, while looking at the data, I realised that not all paintings had a name or a painting. It took some time to figure out how to solve this problem before mapping through them. 
+* On the Gallery Page while looking at the data, I realised that not all paintings had a name or a painting. It took some time to figure out how to solve this problem before mapping through them. 
 * In the code below, I used the ternary operator. First, I checked if the length of the array was greater than 0. This condition ensures that there is at least one element in the array before proceeding. If the condition is true, it will proceed with the filter method and then with the map method. While if the condition is false, it renders the `Error` component, otherwise it renders the `Spinner` component.
 
 ```js
@@ -212,9 +212,9 @@ const { data } = await axios.get(`https://api.harvardartmuseums.org/object?apike
 const { data } = await axios.get(`https://api.harvardartmuseums.org/object/${objectid}?apikey=${process.env.REACT_APP_API_KEY}`)
 ```
 
-* Working in a team with another developer when you are randomly teamed up by the instructor can be very challenging. However, the positive part was that my teammate wanted to focus on CSS and luckily I got the opportunity to practise React, which was the main focus of this project. The difficult part was that we had different visions on the style part in particular, but we found a balance between both of us.
+* Working in a team with another developer when you are randomly teamed up by the instructor can be very challenging. However the positive part was that my teammate wanted to focus on CSS and luckily I got the opportunity to practise React, which was the main focus of this project. The difficult part was that we had different visions on the style part in particular, but we found a balance between both of us.
 * Another challenge, which happened after the deployment was that we were not able to see the images on the Gallery Index and Single page. It took me some time to understand what was happening. Due to the nature of the API, some days there weren’t any images in the array and for this reason they weren’t showing on the browser. For this reason I had to create a ternary and replace the empty image with a placeholder. I had to do this on both pages.
-The ternary below in the Gallery Index page, checks if the array of images exists and if the first image has a `baseimageurl` property. If the condition is true, it will show the URL of the image. If the condition is false, it means that the images array is empty and it will show the placeholder as an image URL:
+The ternary below in the Gallery Index page, checks if the array of images exists and if the first image has a `baseimageurl` property. If the condition is true it will show the URL of the image. If the condition is false it means that the images array is empty and it will show the placeholder as an image URL:
 
 ```js
   <div className="card-image" style={{ backgroundImage: `url('${images && images[0] && images[0].baseimageurl ? images[0].baseimageurl : placeholder}')` }}></div>
@@ -225,8 +225,8 @@ The screenshot below shows that today the images array was empty:
 
 ### Wins
 
-* Glad that I got the chance to practise React, which helped me gain a better understanding of fetching data from an API and how they work.
-* I gained valuable experience from pair coding with my teammate, and despite some occasional challenges, we enjoyed working together and had a fun time collaborating.
+* Glad that I got the chance to practise React which helped me gain a better understanding of fetching data from an API and how they work.
+* I gained valuable experience from pair coding with my teammate and despite some occasional challenges, we enjoyed working together and had a fun time collaborating.
 
 ### Key Learnings
 
