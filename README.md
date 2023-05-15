@@ -12,7 +12,7 @@ The second project of the Software Engineering immersive course at General Assem
 * Be deployed online and accessible to the public.
 
 ## Deployment
-<a href="https://rosie-harvard-api.netlify.app/" target="_blank">Hardvard Art Museum</a>
+<a href="https://rosie-harvard-api.netlify.app/">Hardvard Art Museum</a>
 
 ## Timeframe
 
